@@ -1,201 +1,367 @@
 <!DOCTYPE html>
-<html lang="en" id="home">
-
-<head>
+<html lang="en" data-theme="light">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Portfolio Philip</title>
+    <meta name="csrf-token" content="WA8-AykwJVM7KSEoCWZLHhd0PA8NGxEaiZQwhEqbHsMRHTsL_9j9zjvn">
+    <title>Philip Imanuel Balangkaehe</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Tailwind CSS + daisyUI from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/dist/full.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@4/dist/tailwind.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Bootstrap v.4 link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+    <script defer type="text/javascript" src="assets/js/app.js">
+    </script>
 
-<body>
+    <!-- Custom scroll behavior -->
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navbar -->
+<nav class="navbar bg-base-100 shadow-sm fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 w-full">
+    <div class="flex items-center justify-between h-16">
+      <a href="#home" class="text-xl font-bold text-primary no-underline">MyPortfolio</a>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #7edbff; ">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="pdf/CV20072021.pdf" class="btn btn-sm btn-outline btn-primary" download>Download CV</a>
+        <a href="#about" class="text-sm font-medium hover:text-primary transition-colors no-underline">About</a>
+        <a href="#projects" class="text-sm font-medium hover:text-primary transition-colors no-underline">My Project</a>
+        <a href="#socials" class="text-sm font-medium hover:text-primary transition-colors no-underline">Socials</a>
+      </div>
 
-                <a href="#home" class="navbar-brand page-scroll">MyPortfolio</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="pdf/CV20072021.pdf">Download CV</a></li>
-                    <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#certificate" class="page-scroll">Certificate</a></li>
-                    <li><a href="#contact" class="page-scroll">Socials</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- akhir navbar -->
-
-    <!-- jumbotron -->
-    <div class="jumbotron text-center">
-        <img src="images/size 400.png" alt="Philip Imanuel B" class="img-circle">
-        <h1>Philip Imanuel Balangkaehe</h1>
-        <p></p>
+      <!-- Mobile hamburger -->
+      <div class="dropdown dropdown-end md:hidden">
+        <label tabindex="0" class="btn btn-ghost btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-3 z-50">
+          <li><a href="pdf/CV20072021.pdf">Download CV</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">My Project</a></li>
+          <li><a href="#socials">Socials</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- akhir jumbotron -->
+  </div>
+</nav>
 
-    <!-- about -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center">About</h2>
-                    <hr>
-                </div>
+<!-- Hero / Jumbotron -->
+<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-cyan-50 pt-16">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <img src="images/size 400.png" alt="Philip Imanuel B" class="w-48 h-48 mx-auto rounded-full border-4 border-primary/30 shadow-lg mb-8 hover:scale-105 transition-transform duration-300">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-4 tracking-tight">
+      Philip Imanuel<br>Balangkaehe
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-8 font-medium">
+      Informatics Engineering Student &amp; Front-End Enthusiast
+    </p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+      <a href="#socials" class="btn btn-outline btn-lg">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-4">About Me</h2>
+    <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Intro -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Hello! 👋</h3>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          I am Philip, a student majoring in Informatics Engineering. I have a strong passion for
+          front-end web development and building beautiful, functional user interfaces.
+          My hobbies include playing guitar and listening to music — creativity drives both my
+          personal and professional life.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          I enjoy turning complex problems into simple, intuitive designs. When I'm not coding,
+          you'll find me exploring new music, jamming on my guitar, or learning about the latest
+          web technologies.
+        </p>
+      </div>
+
+      <!-- Skills & Tools -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Skills &amp; Tools</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">HTML / CSS</span>
+              <span class="text-gray-500">90%</span>
             </div>
-
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <p>Hello I am Philip, I am a student majoring in informatics engineering.
-                        My hobbies are playing guitar and listen music.
-                        Front-end web is a field that I love to learn.</p>
-
-                </div>
+            <progress class="progress progress-primary w-full" value="90" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">JavaScript</span>
+              <span class="text-gray-500">75%</span>
             </div>
+            <progress class="progress progress-primary w-full" value="75" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">Phoenix / Elixir</span>
+              <span class="text-gray-500">60%</span>
+            </div>
+            <progress class="progress progress-primary w-full" value="60" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">Bootstrap / Tailwind</span>
+              <span class="text-gray-500">85%</span>
+            </div>
+            <progress class="progress progress-primary w-full" value="85" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">Git &amp; Version Control</span>
+              <span class="text-gray-500">80%</span>
+            </div>
+            <progress class="progress progress-primary w-full" value="80" max="100"></progress>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span class="font-medium">REST API</span>
+              <span class="text-gray-500">65%</span>
+            </div>
+            <progress class="progress progress-primary w-full" value="65" max="100"></progress>
+          </div>
         </div>
-    </section>
-    <!-- akhir about -->
+      </div>
+    </div>
 
-    <!-- certificate -->
-    <section class="certificate" id="certificate">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2>Certificate</h2>
-                    <hr>
-                </div>
-            </div>
+    <!-- Tech Icons -->
+    <div class="mt-12 text-center">
+      <h4 class="text-lg font-semibold mb-4 text-gray-500">Technologies I Work With</h4>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <span class="badge badge-lg badge-outline">HTML5</span>
+        <span class="badge badge-lg badge-outline">CSS3</span>
+        <span class="badge badge-lg badge-outline">JavaScript</span>
+        <span class="badge badge-lg badge-outline">Elixir</span>
+        <span class="badge badge-lg badge-outline">Phoenix</span>
+        <span class="badge badge-lg badge-outline">Tailwind CSS</span>
+        <span class="badge badge-lg badge-outline">Bootstrap</span>
+        <span class="badge badge-lg badge-outline">Git</span>
+        <span class="badge badge-lg badge-outline">SQL</span>
+        <span class="badge badge-lg badge-outline">REST API</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="row">
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/1.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/2.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/3.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/4.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/5.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="" class="thumbnail">
-                        <img src="images/sertifikat/6.png" alt="">
-                    </a>
-                </div>
+<!-- My Project -->
+<section id="projects" class="py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-4">My Project</h2>
+    <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/3b82f6/ffffff?text=E-Commerce" alt="E-Commerce Dashboard" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">E-Commerce Dashboard</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Dashboard admin untuk platform e-commerce dengan fitur analitik penjualan, manajemen produk, dan laporan real-time.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
+
+                <span class="badge badge-sm badge-soft">Elixir</span>
+
+                <span class="badge badge-sm badge-soft">Phoenix</span>
+
+                <span class="badge badge-sm badge-soft">LiveView</span>
+
+                <span class="badge badge-sm badge-soft">PostgreSQL</span>
+
             </div>
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
+            </div>
+          </div>
         </div>
-    </section>
-    <!-- akhir certificate -->
 
-    <!-- social media -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h2>Socials</h2>
-                    <hr>
-                </div>
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/10b981/ffffff?text=Task+Manager" alt="Task Management App" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">Task Management App</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Aplikasi manajemen tugas kolaboratif dengan fitur drag-and-drop, real-time updates, dan integrasi kalender.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
+
+                <span class="badge badge-sm badge-soft">React</span>
+
+                <span class="badge badge-sm badge-soft">Node.js</span>
+
+                <span class="badge badge-sm badge-soft">Socket.io</span>
+
+                <span class="badge badge-sm badge-soft">MongoDB</span>
+
             </div>
-
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <!-- twitter -->
-                    <a target="_blank" href="https://twitter.com/Philip_Imanuel" class="button twitter"><span><i
-                                class="fa fa-twitter"></i></span>
-                        <p>Twitter</p>
-                    </a>
-                    <!-- instagram -->
-                    <a target="_blank" href="https://www.instagram.com/philipimanuel/" class="button instagram"><span><i
-                                class="fa fa-instagram"></i></span>
-                        <p>Instagram</p>
-                    </a>
-                    <!-- github -->
-                    <a target="_blank" href="https://github.com/pib0student" class="button github"><span><i
-                                class="fa fa-github"></i></span>
-                        <p>Github</p>
-                    </a>
-                    <!-- whatsapp -->
-                    <a target="_blank" href="https://wa.me/6282354714844" class="button whatsapp"><span><i
-                                class="fa fa-whatsapp"></i></span>
-                        <p>Whatsapp</p>
-                    </a>
-                </div>
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
             </div>
-
+          </div>
         </div>
-    </section>
-    <!-- akhir social media -->
 
-    <!-- footer -->
-    <footer>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p> Copyright &copy; 2021 Philip
-                        Imanuel Balangkaehe.</p>
-                </div>
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Weather+App" alt="Weather Forecast UI" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">Weather Forecast UI</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Antarmuka ramalan cuaca interaktif dengan visualisasi data, peta animasi, dan notifikasi cuaca ekstrem.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
+
+                <span class="badge badge-sm badge-soft">Vue.js</span>
+
+                <span class="badge badge-sm badge-soft">D3.js</span>
+
+                <span class="badge badge-sm badge-soft">OpenWeather API</span>
+
+                <span class="badge badge-sm badge-soft">PWA</span>
+
             </div>
-
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!-- akhir footer -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Portfolio+v1" alt="Portfolio Website v1" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">Portfolio Website v1</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Website portofolio pribadi single-page dengan animasi scroll parallax dan tombol sosial media.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
 
-    <script src="js/script.js"></script>
-</body>
+                <span class="badge badge-sm badge-soft">HTML</span>
 
+                <span class="badge badge-sm badge-soft">CSS</span>
+
+                <span class="badge badge-sm badge-soft">Bootstrap</span>
+
+                <span class="badge badge-sm badge-soft">jQuery</span>
+
+            </div>
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/ef4444/ffffff?text=Inventory+System" alt="Inventory Management System" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">Inventory Management System</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Sistem manajemen inventaris untuk UKM dengan fitur barcode scanning, stok otomatis, dan laporan bulanan.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
+
+                <span class="badge badge-sm badge-soft">Laravel</span>
+
+                <span class="badge badge-sm badge-soft">MySQL</span>
+
+                <span class="badge badge-sm badge-soft">Bootstrap</span>
+
+                <span class="badge badge-sm badge-soft">REST API</span>
+
+            </div>
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <figure class="relative overflow-hidden">
+            <img src="https://placehold.co/600x400/06b6d4/ffffff?text=Chat+App" alt="Chat Application" class="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title text-lg">Chat Application</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Aplikasi chatting real-time dengan fitur enkripsi end-to-end, group chat, dan berbagi file.</p>
+            <div class="flex flex-wrap gap-1 mt-2">
+
+                <span class="badge badge-sm badge-soft">Phoenix</span>
+
+                <span class="badge badge-sm badge-soft">LiveView</span>
+
+                <span class="badge badge-sm badge-soft">PubSub</span>
+
+                <span class="badge badge-sm badge-soft">Tailwind</span>
+
+            </div>
+            <div class="card-actions mt-3">
+              <a href="#" class="btn btn-sm btn-primary btn-outline">View Project</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Socials -->
+<section id="socials" class="py-24 bg-white">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-4">Connect With Me</h2>
+    <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+
+    <p class="text-gray-600 mb-10 text-lg">Feel free to reach out through any of these platforms!</p>
+
+    <div class="flex justify-center gap-4 flex-wrap">
+      <!-- Twitter -->
+      <a target="_blank" href="https://twitter.com/Philip_Imanuel" class="btn btn-lg text-white border-0" style="background-color: #00acee;">
+        <i class="fa fa-twitter mr-2"></i> Twitter
+      </a>
+      <!-- Instagram -->
+      <a target="_blank" href="https://www.instagram.com/philipimanuel/" class="btn btn-lg text-white border-0" style="background-color: #DD2A7B;">
+        <i class="fa fa-instagram mr-2"></i> Instagram
+      </a>
+      <!-- GitHub -->
+      <a target="_blank" href="https://github.com/pib0student" class="btn btn-lg text-white border-0" style="background-color: #171515;">
+        <i class="fa fa-github mr-2"></i> GitHub
+      </a>
+      <!-- WhatsApp -->
+      <a target="_blank" href="https://wa.me/6282354714844" class="btn btn-lg text-white border-0" style="background-color: #03d360;">
+        <i class="fa fa-whatsapp mr-2"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-400 py-8">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <p class="text-sm">
+      Copyright &copy; 2024 Philip Imanuel Balangkaehe. Built with
+      <span class="text-red-400">♥</span> using Phoenix Framework.
+    </p>
+  </div>
+</footer>
+  </body>
 </html>
