@@ -1,0 +1,79 @@
+<section id="about" class="py-24" style="background: var(--bg);">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="reveal text-center mb-16">
+      <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: var(--accent);">About</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Get to know me</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-12">
+      <!-- Bio -->
+      <div class="reveal md:col-span-3 space-y-4">
+        <p class="leading-relaxed" style="color: var(--text-secondary);">
+          Hey there! I'm <span style="color: var(--text-primary); font-weight: 600;">Philip</span>, currently pursuing
+          my degree in Informatics Engineering. I fell in love with the web because it's the perfect mix of
+          <span style="color: var(--accent);">logic</span> and
+          <span style="color: var(--amber);">creativity</span>.
+        </p>
+        <p class="leading-relaxed" style="color: var(--text-secondary);">
+          When I'm not pushing pixels or debugging layouts, you'll find me with my guitar,
+          discovering new music, or diving into the latest front-end tech. I believe good design
+          feels effortless — and that's what I strive for in every project.
+        </p>
+        <div
+          class="mt-6 p-4 rounded-xl"
+          style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);"
+        >
+          <p class="text-sm" style="color: var(--text-secondary);">
+            <span style="color: var(--amber);">&#x1F3B8;</span> Currently learning:
+            <span style="color: var(--text-primary); font-weight: 600;">Astro + modern front-end</span>
+            — this site is built with it!
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="reveal md:col-span-2 space-y-5">
+        <h3 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Skills & Tools</h3>
+        {
+          [
+            ["HTML / CSS", 90],
+            ["JavaScript", 75],
+            ["Elixir / Phoenix", 60],
+            ["Tailwind CSS", 85],
+            ["Git & Version Control", 80],
+            ["REST API", 65],
+          ].map(([skill, pct]) => (
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">{skill}</span>
+                <span style="color: var(--accent);">{pct}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style={`width: ${pct}%`}></div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Tech tags -->
+    <div class="reveal mt-12 text-center">
+      <div class="flex justify-center gap-2 flex-wrap">
+        {
+          ["HTML5", "CSS3", "JavaScript", "Elixir", "Phoenix", "Tailwind CSS", "Bootstrap", "Git", "SQL", "REST API"].map(
+            (tag) => (
+              <span
+                class="text-xs font-medium px-3 py-1.5 rounded-full"
+                style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);"
+              >
+                {tag}
+              </span>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
