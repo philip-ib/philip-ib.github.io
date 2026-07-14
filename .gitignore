@@ -1,5 +1,13 @@
-# build output
+# build output (root only — source assets live in public/)
 dist/
+/_astro/
+/index.html
+/favicon.ico
+/favicon.svg
+/fonts/
+/images/
+/pdf/
+
 # generated types
 .astro/
 
