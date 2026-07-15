@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
 /* ===== Dark & Moody Design System ===== */
 :root {
@@ -28,8 +27,7 @@ body {
   margin: 0;
 }
 
-/* ===== Reusable Utilities ===== */
-
+/* ===== Dot Pattern (Hero background texture) ===== */
 .dot-pattern {
   position: absolute;
   inset: 0;
@@ -39,11 +37,12 @@ body {
   pointer-events: none;
 }
 
+/* ===== Avatar Glow Ring ===== */
 .glow-ring {
   box-shadow: 0 0 60px -15px var(--accent-glow), 0 0 0 1px var(--border-visible);
 }
 
-/* Fade-in on scroll */
+/* ===== Scroll Reveal Animation ===== */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -54,7 +53,7 @@ body {
   transform: translateY(0);
 }
 
-/* Section divider */
+/* ===== Section Divider (accent-to-amber gradient) ===== */
 .section-divider {
   width: 60px;
   height: 3px;
@@ -63,7 +62,7 @@ body {
   margin: 0 auto;
 }
 
-/* Card hover glow */
+/* ===== Card Hover Glow ===== */
 .card-glow {
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
@@ -73,7 +72,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* Navbar blur */
+/* ===== Navbar Blur Effect ===== */
 .nav-blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -81,7 +80,7 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-/* Skill bar animation */
+/* ===== Skill Bar Animation ===== */
 .skill-bar {
   height: 6px;
   border-radius: 3px;
@@ -94,3 +93,4 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--amber));
   transition: width 1s ease-out;
 }
+

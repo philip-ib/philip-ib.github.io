@@ -1,12 +1,10 @@
-export interface Project {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  link: string;
-}
-
-export const projects: Project[] = [
+/**
+ * Portfolio v4 — Project Data
+ *
+ * To add, remove, or update a project, edit the array below.
+ * Each project requires: title, description, image, tags (array), link.
+ */
+const projectsData = [
   {
     title: "E-Commerce Dashboard",
     description:

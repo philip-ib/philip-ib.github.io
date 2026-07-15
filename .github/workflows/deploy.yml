@@ -27,10 +27,16 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Verify build output
-        run: ls -la dist/ dist/images/
+      - name: Build CSS
+        run: npm run build:css
+      - name: Stage deployment files
+        run: |
+          mkdir -p dist
+          cp index.html style.css dist/
+          cp -r js data images pdf fonts dist/ 2>/dev/null || true
+          cp favicon.ico favicon.svg .nojekyll dist/ 2>/dev/null || true
+      - name: Verify staged files
+        run: ls -la dist/ dist/images/ dist/js/ dist/data/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

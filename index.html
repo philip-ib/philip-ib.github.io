@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Informatics Engineering student & front-end enthusiast. Guitar player, music lover, pixel pusher." />
+    <title>Philip Imanuel B — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 4.7 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <!-- ==================================================================
+         NAVBAR
+         ================================================================== -->
+    <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <a href="#home" class="text-lg font-bold tracking-tight no-underline" style="color: var(--text-primary);">
+            <span style="color: var(--accent);">&#x2776;</span> myportfolio
+          </a>
+
+          <!-- Desktop nav -->
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a
+              href="/pdf/CV20072021.pdf"
+              class="no-underline px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200 hover:scale-105"
+              style="border-color: var(--accent); color: var(--accent);"
+              download
+            >
+              Download CV
+            </a>
+            <a href="#about" class="no-underline transition-colors duration-200 hover:text-[var(--accent)]" style="color: var(--text-secondary);">About</a>
+            <a href="#projects" class="no-underline transition-colors duration-200 hover:text-[var(--accent)]" style="color: var(--text-secondary);">Projects</a>
+            <a href="#socials" class="no-underline transition-colors duration-200 hover:text-[var(--accent)]" style="color: var(--text-secondary);">Socials</a>
+          </div>
+
+          <!-- Mobile hamburger -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              class="p-2 rounded-lg transition-colors duration-200 hover:bg-white/5"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              style="color: var(--text-primary);"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="menu-overlay" class="hidden fixed inset-0 z-40" style="background: rgba(0,0,0,0.5);"></div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu" class="hidden fixed top-16 right-0 z-50 w-48 mr-4 rounded-xl shadow-lg" style="background: var(--surface); border: 1px solid var(--border);">
+      <ul class="p-2 space-y-0.5">
+        <li><a href="/pdf/CV20072021.pdf" class="block px-4 py-2 rounded-lg text-sm font-medium no-underline transition-colors hover:bg-white/5" style="color: var(--text-primary);" download>Download CV</a></li>
+        <li><a href="#about" class="block px-4 py-2 rounded-lg text-sm font-medium no-underline transition-colors hover:bg-white/5" style="color: var(--text-secondary);">About</a></li>
+        <li><a href="#projects" class="block px-4 py-2 rounded-lg text-sm font-medium no-underline transition-colors hover:bg-white/5" style="color: var(--text-secondary);">Projects</a></li>
+        <li><a href="#socials" class="block px-4 py-2 rounded-lg text-sm font-medium no-underline transition-colors hover:bg-white/5" style="color: var(--text-secondary);">Socials</a></li>
+      </ul>
+    </div>
+
+    <!-- ==================================================================
+         HERO
+         ================================================================== -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style="background: radial-gradient(ellipse 80% 60% at 50% -20%, #1a1a3e 0%, var(--bg) 60%);"
+    >
+      <div class="dot-pattern"></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center pt-16">
+        <!-- Avatar -->
+        <div class="reveal">
+          <img
+            src="/images/size 400.png"
+            alt="Philip Imanuel"
+            class="w-36 h-36 mx-auto rounded-full object-cover mb-8 glow-ring"
+            style="border: 3px solid var(--border); padding: 4px;"
+          />
+        </div>
+
+        <!-- Name -->
+        <h1 class="reveal text-5xl md:text-7xl font-black tracking-tight mb-4 leading-none" style="color: var(--text-primary);">
+          Philip <span style="color: var(--accent);">Imanuel</span>
+        </h1>
+        <p class="reveal text-xl md:text-2xl font-medium mb-3" style="color: var(--accent); opacity: 0.8;">
+          Balangkaehe
+        </p>
+
+        <!-- Tagline -->
+        <p class="reveal text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
+          Informatics Engineering Student crafting
+          <span style="color: var(--text-primary);">clean</span> &
+          <span style="color: var(--text-primary);">thoughtful</span>
+          front-end experiences. Guitar player, music lover, pixel pusher.
+        </p>
+
+        <!-- CTA -->
+        <div class="reveal flex justify-center gap-4 flex-wrap">
+          <a
+            href="#projects"
+            class="no-underline px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 hover:scale-105"
+            style="background: var(--accent); color: #fff; box-shadow: 0 4px 20px -4px var(--accent-glow);"
+          >
+            View My Work
+          </a>
+          <a
+            href="#socials"
+            class="no-underline px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 hover:scale-105"
+            style="border: 1px solid var(--border-visible); color: var(--text-primary);"
+          >
+            Get in Touch &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         ABOUT
+         ================================================================== -->
+    <section id="about" class="py-24" style="background: var(--bg);">
+      <div class="max-w-5xl mx-auto px-6">
+        <!-- Section header -->
+        <div class="reveal text-center mb-16">
+          <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: var(--accent);">About</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Get to know me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-12">
+          <!-- Bio -->
+          <div class="reveal md:col-span-3 space-y-4">
+            <p class="leading-relaxed" style="color: var(--text-secondary);">
+              Hey there! I'm <span style="color: var(--text-primary); font-weight: 600;">Philip</span>, currently pursuing
+              my degree in Informatics Engineering. I fell in love with the web because it's the perfect mix of
+              <span style="color: var(--accent);">logic</span> and
+              <span style="color: var(--amber);">creativity</span>.
+            </p>
+            <p class="leading-relaxed" style="color: var(--text-secondary);">
+              When I'm not pushing pixels or debugging layouts, you'll find me with my guitar,
+              discovering new music, or diving into the latest front-end tech. I believe good design
+              feels effortless — and that's what I strive for in every project.
+            </p>
+            <!-- Info card -->
+            <div
+              class="mt-6 p-4 rounded-xl"
+              style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);"
+            >
+              <p class="text-sm" style="color: var(--text-secondary);">
+                <span style="color: var(--amber);">&#x1F3B8;</span> Currently learning:
+                <span style="color: var(--text-primary); font-weight: 600;">modern front-end</span>
+                — this site is built with it!
+              </p>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="reveal md:col-span-2 space-y-5">
+            <h3 class="text-lg font-semibold mb-4" style="color: var(--text-primary);">Skills &amp; Tools</h3>
+
+            <!-- HTML / CSS -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">HTML / CSS</span>
+                <span style="color: var(--accent);">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">JavaScript</span>
+                <span style="color: var(--accent);">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Elixir / Phoenix -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">Elixir / Phoenix</span>
+                <span style="color: var(--accent);">60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="60" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Tailwind CSS -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">Tailwind CSS</span>
+                <span style="color: var(--accent);">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Git & Version Control -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">Git &amp; Version Control</span>
+                <span style="color: var(--accent);">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- REST API -->
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1.5">
+                <span style="color: var(--text-secondary);">REST API</span>
+                <span style="color: var(--accent);">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65" style="width: 0%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech tags -->
+        <div class="reveal mt-12 text-center">
+          <div class="flex justify-center gap-2 flex-wrap">
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">HTML5</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">CSS3</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">JavaScript</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">Elixir</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">Phoenix</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">Tailwind CSS</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">Bootstrap</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">Git</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">SQL</span>
+            <span class="text-xs font-medium px-3 py-1.5 rounded-full" style="background: var(--surface); color: var(--text-secondary); border: 1px solid var(--border-visible);">REST API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         PROJECTS
+         ================================================================== -->
+    <section id="projects" class="py-24" style="background: #0c0c10;">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-16">
+          <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: var(--amber);">Projects</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Things I've built</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Rendered dynamically from data/projects.js -->
+        <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SOCIALS
+         ================================================================== -->
+    <section id="socials" class="py-24" style="background: var(--bg);">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <div class="reveal mb-16">
+          <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: var(--accent);">Connect</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--text-primary);">Let's talk</h2>
+          <div class="section-divider"></div>
+          <p class="mt-4" style="color: var(--text-secondary);">Reach out through any of these platforms</p>
+        </div>
+
+        <div class="reveal flex justify-center gap-3 flex-wrap">
+          <!-- Twitter -->
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://twitter.com/Philip_Imanuel"
+            class="no-underline px-5 py-3 rounded-xl font-medium text-sm transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style="background: #00acee; color: #fff;"
+          >
+            <i class="fa fa-twitter"></i> Twitter
+          </a>
+          <!-- Instagram -->
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.instagram.com/philipimanuel/"
+            class="no-underline px-5 py-3 rounded-xl font-medium text-sm transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style="background: #DD2A7B; color: #fff;"
+          >
+            <i class="fa fa-instagram"></i> Instagram
+          </a>
+          <!-- GitHub -->
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/philip-ib"
+            class="no-underline px-5 py-3 rounded-xl font-medium text-sm transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style="background: #333; color: #fff;"
+          >
+            <i class="fa fa-github"></i> GitHub
+          </a>
+          <!-- WhatsApp -->
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://wa.me/6282354714844"
+            class="no-underline px-5 py-3 rounded-xl font-medium text-sm transition-all duration-200 hover:scale-105 flex items-center gap-2"
+            style="background: #03d360; color: #fff;"
+          >
+            <i class="fa fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         FOOTER
+         ================================================================== -->
+    <footer class="py-8 text-center" style="background: #0c0c10; border-top: 1px solid var(--border);">
+      <div class="max-w-4xl mx-auto px-6">
+        <p class="text-sm" style="color: var(--text-secondary);">
+          Built with <span style="color: #ef4444;">&hearts;</span> and
+          <span style="color: var(--accent);">vanilla JS</span> &middot;
+          &copy; 2025 Philip Imanuel Balangkaehe
+        </p>
+      </div>
+    </footer>
+
+    <!-- ==================================================================
+         SCRIPTS
+         ================================================================== -->
+    <script src="/data/projects.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
