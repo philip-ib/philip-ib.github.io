@@ -34,7 +34,7 @@ jobs:
           mkdir -p dist
           cp index.html style.css dist/
           cp -r js data images pdf fonts dist/ 2>/dev/null || true
-          cp favicon.ico favicon.svg .nojekyll dist/ 2>/dev/null || true
+          cp favicon.svg .nojekyll dist/ 2>/dev/null || true
       - name: Verify staged files
         run: ls -la dist/ dist/images/ dist/js/ dist/data/
       - name: Upload artifact
