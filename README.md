@@ -1,43 +1,41 @@
-# Astro Starter Kit: Minimal
+# Philip Imanuel B — Portfolio v4
 
-```sh
-npm create astro@latest -- --template minimal
+Single-page portfolio website built with vanilla JavaScript and Tailwind CSS.
+
+## Tech Stack
+
+- **HTML** — single `index.html` with all 6 sections
+- **CSS** — Tailwind CSS v4 via CLI + custom design tokens
+- **JavaScript** — vanilla JS for interactivity (no framework)
+- **Zero runtime dependencies** — only `@tailwindcss/cli` as dev dependency
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
+├── index.html              # Single-page — Navbar, Hero, About, Projects, Socials, Footer
+├── style.css               # Generated Tailwind CSS output (committed)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   └── input.css           # Tailwind input + design tokens + custom utilities
+├── js/
+│   └── main.js             # Mobile menu, scroll reveal, skill bars, nav highlight, project cards
+├── data/
+│   └── projects.js         # Project data (edit to add/update projects)
+├── images/                 # Static images (avatar, etc.)
+├── pdf/                    # Downloadable files (CV)
+├── package.json            # npm scripts (build:css, watch, dev)
+└── .github/workflows/deploy.yml  # Auto-deploy to GitHub Pages
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm install          # Install Tailwind CSS CLI
+npm run dev          # Watch CSS changes
+npm run build:css    # Build minified CSS once
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Open `index.html` directly in browser — no dev server needed.
 
-## 🧞 Commands
+## Deployment
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Push to `main` → GitHub Actions builds CSS and deploys to GitHub Pages.
